@@ -25,7 +25,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "awesome-typescript-loader" 
+        loader: "ts-loader" 
       },
       { 
         enforce: "pre", 
@@ -42,10 +42,5 @@ module.exports = {
         use: ["file-loader"]
       }
     ]
-  },
-
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   }
 };
