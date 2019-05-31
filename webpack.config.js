@@ -1,11 +1,18 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   mode: "development",
   output: {
     filename: "./main.js"
   },
+
+  devtool: "source-map",
+
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"]
+  },
+
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
@@ -17,11 +24,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader"
-        }
+        test: /\.tsx?$/,
+        loader: "ts-loader" 
+      },
+      { 
+        enforce: "pre", 
+        test: /\.js$/, 
+        loader: "source-map-loader" 
       },
       {
         test: /\.scss$/,
