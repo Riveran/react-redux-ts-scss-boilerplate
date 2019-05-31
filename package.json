@@ -24,7 +24,6 @@
   "dependencies": {
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
-<<<<<<< HEAD
     "@types/redux-logger": "^3.0.7",
     "@types/redux-thunk": "^2.1.0",
     "node-sass": "^4.12.0",
@@ -34,11 +33,6 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-=======
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
->>>>>>> bfce3b7c37136ec2b4ab3a89cadc997aaa003edc
     "ts-loader": "^6.0.1"
   }
 }
